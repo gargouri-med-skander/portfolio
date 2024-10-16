@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+AddType video/mp4 .mp4
+# GZIP compression
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
